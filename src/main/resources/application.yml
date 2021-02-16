@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+springfox:
+  documentation:
+    open-api:
+      v3:
+        path: /api-docs

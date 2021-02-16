@@ -1,0 +1,65 @@
+openapi: 3.0.0
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/txabman42/github-test/1.0.0
+info:
+  description: Template API for Github technical test
+  version: "1.0.0"
+  title: Github API
+  contact:
+    email: x42.martinez@gmail.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: user
+    description: Template user
+paths:
+  /users/{id}:
+    get:
+      tags:
+        - user
+      summary: Search user by id
+      operationId: findUsers
+      description: |
+        By passing in the appropriate id, you can get the corresponding
+        user's information
+      parameters:
+        - in: path
+          name: id
+          description: user's id
+          required: true
+          schema:
+            type: string
+            format: uuid
+            example: '87692244-4826-8811-1002-238905902123'
+      responses:
+        '200':
+          description: found user matching criteria
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserDto'
+        '400':
+          description: bad input parameter
+components:
+  schemas:
+    UserDto:
+      type: object
+      required:
+        - id
+        - name
+        - creationDate
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        name:
+          type: string
+          example: Elton John
+        creationDate:
+          type: string
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'
