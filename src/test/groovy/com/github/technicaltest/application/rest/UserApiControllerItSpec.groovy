@@ -1,4 +1,4 @@
-package com.github.technicaltest.controller
+package com.github.technicaltest.application.rest
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.github.technicaltest.application.model.UserDto

@@ -1,4 +1,4 @@
-package com.github.technicaltest.exception
+package com.github.technicaltest.application.rest.configuration.exception
 
 import com.github.technicaltest.application.rest.configuration.exception.GithubNotFoundException
 import com.github.technicaltest.support.DummyApplication

@@ -1,4 +1,4 @@
-package com.github.technicaltest.service
+package com.github.technicaltest.domain.service
 
 import com.github.technicaltest.application.rest.configuration.exception.GithubNotFoundException
 import com.github.technicaltest.domain.model.User
