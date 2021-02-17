@@ -17,7 +17,7 @@ jobs:
       - name: Build JAR
         run: |
           cd $GITHUB_WORKSPACE
-          mvn clean build -DskipTests
+          mvn clean compile
 
   test:
     name: Run Test
